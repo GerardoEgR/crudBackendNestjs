@@ -13,11 +13,10 @@ Este proyecto tiene como objetivo calcular el valor de cuota de una simulación 
 
 ## Instalación y Ejecución 
 
-* Clonar este repositorio: git clone https://github.com/tu-usuario/tu-proyecto.git
+* Clonar este repositorio: `git clone  https://github.com/GerardoEgR/crudBackendNestjs.git`
 * Navegar al directorio del backend: cd tu-proyecto/backend
 * Instalar las dependencias: npm install
-* Configura la conexión a la base de datos en tu-proyecto/src/app.module.ts.
-
+* Configurar la conexión a la base de datos en tu-proyecto/src/app.module.ts.
 ```bash
 # BD connection 
 type: 'mysql',
@@ -29,49 +28,37 @@ database: 'db_credito',
 entities: [__dirname + '/**/*.entity{.ts,.js}'],
 synchronize: true,
 ```
-Inicia el backend: npm run start:dev
-El backend estará disponible en http://localhost:3000.
-
+* Crear la Base de Datos en MySql: 
 ```bash
-$ npm install
+# Creación DB 
+CREATE DATABASE db_credito;
+
+# Creación Tabla TRX_LOG
+CREATE TABLE TRX_LOG(
+id_TRX int auto_increment primary key,
+fecha_TRX timestamp  not null,
+json_TRX varchar(50) not null
+);
 ```
 
-## Running the app
-
+* Iniciar el backend: 
 ```bash
-# development
-$ npm run start
-
-# watch mode
+# Inicio en entorno de dasarrollo
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+El backend estará disponible en `http://localhost:3000`.
 
-```bash
-# unit tests
-$ npm run test
+## Uso
 
-# e2e tests
-$ npm run test:e2e
+* Abre tu navegador web y accede a `http://localhost:4200/`.
+* Completa el formulario con los datos requeridos.
+* Haz clic en el botón "Enviar Consulta" para enviar los datos al backend.
+* El backend realizará el cálculo y almacenará el resultado en la base de datos.
+* El resultado se mostrará en pantalla para que el usuario lo vea.
 
-# test coverage
-$ npm run test:cov
-```
+## Tecnologías Utilizadas
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+* Angular: Framework de desarrollo de aplicaciones web del lado del cliente.
+* NestJS: Framework de desarrollo de aplicaciones backend con Node.js.
+* MySQL: Base de datos relacional para almacenar los resultados.

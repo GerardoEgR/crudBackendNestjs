@@ -37,7 +37,7 @@ CREATE DATABASE db_credito;
 CREATE TABLE TRX_LOG(
 id_TRX int auto_increment primary key,
 fecha_TRX timestamp  not null,
-json_TRX varchar(50) not null
+json_TRX varchar(255) not null
 );
 ```
 

@@ -1,32 +1,36 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Descripción del Proyecto
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Este proyecto tiene como objetivo calcular el valor de cuota de una simulación de crédito desarrollado con Angular y NestJS, donde en esta primera parte solo se encuentra el desarrollo backend. La aplicación permite a los usuarios ingresar datos a través de un formulario en la interfaz de usuario, enviar esos datos al backend construido con NestJS, realizar un cálculo basado en los datos proporcionados y finalmente mostrar el resultado al usuario en pantalla. Además, los resultados se guardan en una base de datos creada en MySql para su posterior consulta.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+* En este repositorio solo se encuentra el desarrollo del backend. 
 
-## Description
+## Características principales proyecto completo
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+* Interfaz de usuario amigable con un formulario para ingresar datos.
+* Backend construido con NestJS para realizar cálculos y gestionar la persistencia de datos.
+* Comunicación segura entre el frontend y el backend a través de API RESTful.
+* Almacenamiento de resultados en una base de datos para su posterior consulta y referencia.
 
-## Installation
+## Instalación y Ejecución 
+
+* Clonar este repositorio: git clone https://github.com/tu-usuario/tu-proyecto.git
+* Navegar al directorio del backend: cd tu-proyecto/backend
+* Instalar las dependencias: npm install
+* Configura la conexión a la base de datos en tu-proyecto/src/app.module.ts.
+
+```bash
+# BD connection 
+type: 'mysql',
+host: 'localhost',
+port: 3306,
+username: 'root',
+password: 'admin',
+database: 'db_credito',
+entities: [__dirname + '/**/*.entity{.ts,.js}'],
+synchronize: true,
+```
+Inicia el backend: npm run start:dev
+El backend estará disponible en http://localhost:3000.
 
 ```bash
 $ npm install
